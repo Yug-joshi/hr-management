@@ -1,0 +1,19 @@
+{
+  "name": "flashems",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "FlashEMS_Frontend",
+    "FlashEMS_Backend"
+  ],
+  "scripts": {
+    "start": "concurrently \"npm start --workspace=flashems_backend\" \"npm run dev --workspace=flashems-frontend\"",
+    "dev": "concurrently \"npm run dev --workspace=flashems_backend\" \"npm run dev --workspace=flashems-frontend\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "mongoose": "^9.3.3"
+  }
+}
